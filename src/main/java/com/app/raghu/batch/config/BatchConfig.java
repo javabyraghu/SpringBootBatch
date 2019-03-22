@@ -38,7 +38,7 @@ public class BatchConfig {
 	@Bean
 	public Step stepA() {
 		return stepBuilderFactory.get("stepA")
-				.<String, String>chunk(1)
+				.<String, String>chunk(50)
 				.reader(new DataReader())
 				.processor(new DataProcessor())
 				.writer(new DataWriter())
